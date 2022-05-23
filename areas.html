@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trigno calculation</title>
+
+</head>
+<body>
+    <fieldset style="width:500px">
+        <h4> Trignometric calculation</h4><br>
+    <label>Area of circle:</label>
+    <input type="number" id="radius" name="radius" placeholder="Enter radius of circle "><br><br>
+        <label>Area of square:</label>
+    <input type="number" id="side" name="side" placeholder="Enter the side of square"><br><br>
+        <label>Area of Traingle:</label>
+    <input type="number" id="base" name="base" placeholder="Enter base of traingle">
+        <input type="number" id="height" name="height" placeholder="Enter the height"><br><br>
+        <label>Area of Rectangle:</label>
+    <input type="number" id="length" name="length" placeholder="Enter the Length">
+        <input type="number" id="breadth" name="breadth" placeholder="Enter the breadth"><br><br>
+    <input type="button" value="calculate" onclick="getresult()"><br><br>
+</fieldset>
+<table border="1">
+    <h4> Output </h4>
+    <tr>
+        <td>
+            Area of circle=
+        </td>
+        <td>
+            <input type="number" id="txtcircle">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Area of square=
+        </td>
+        <td>
+            <input type="number" id="textsquare">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Area of Traingle=
+        </td>
+        <td>
+            <input type="number" id="texttriangle">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Area of Rectangle=
+        </td>
+        <td>
+            <input type="number" id="textrectangle">
+        </td>
+    </tr>
+<!--    <tr>-->
+<!--        <td>-->
+<!--            Area of Parallelogram=-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <input type="number" id="textParallelogram">-->
+<!--        </td>-->
+<!--    </tr>-->
+</table>
+<script type="text/javascript">
+
+    function getresult(){
+        
+    var radius=document.getElementById("radius").value;
+    var pi=3.14;
+    var AreaOfCircle=pi*radius*radius;
+    document.getElementById("txtcircle").value=AreaOfCircle;
+
+    var side=document.getElementById("side").value;
+    var side;
+    var AreaOfSquare=side*side;
+    document.getElementById("textsquare").value=AreaOfSquare;
+
+    var base=document.getElementById("base").value;
+    var height=document.getElementById("height").value;
+    var AreaOfTraingle=0.5*base*height;
+    document.getElementById("texttriangle").value=AreaOfTraingle;
+
+    var length=document.getElementById("length").value;
+    var breadth=document.getElementById("breadth").value;
+    var AreaOfRectangle=length*breadth;
+    document.getElementById("textrectangle").value=AreaOfRectangle;
+}
+
+</script>
+</body>
